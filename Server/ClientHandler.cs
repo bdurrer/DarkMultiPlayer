@@ -967,6 +967,9 @@ namespace DarkMultiPlayerServer
                     case ClientMessageType.LOCK_SYSTEM:
                         HandleLockSystemMessage(client, message.data);
                         break;
+                    case ClientMessageType.GROUP_SYSTEM:
+                        MessageHandler.GroupSystemHandler.HandleMessage(client, message.data);
+                        break;
                     case ClientMessageType.MOD_DATA:
                         HandleModDataMessage(client, message.data);
                         break;
